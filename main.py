@@ -10,7 +10,7 @@ with open('/Users/amadoudiakhadiop/Downloads/Loan_prediction_dataset.csv', 'r') 
 data = np.genfromtxt(io.StringIO(csv_data), delimiter=',', skip_header=1)
 
 # Calculate the mean, median, and standard deviation of the loan amounts
-loan_amounts = data[:, 6]
+loan_amounts = data[:, 7]
 
 mean_loan_amount = np.mean(loan_amounts)
 median_loan_amount = np.median(loan_amounts)

@@ -9,12 +9,12 @@ with open('/Users/amadoudiakhadiop/Downloads/Loan_prediction_dataset.csv', 'r') 
 # Convert the CSV data string into a NumPy array using genfromtxt
 data = np.genfromtxt(io.StringIO(csv_data), delimiter=',', skip_header=1)
 
-# Calculate the mean, median, and standard deviation of the loan amounts
-loan_amounts = data[:, 7]
+loan_amount = data[:, 8]
 
-mean_loan_amount = np.mean(loan_amounts)
-median_loan_amount = np.median(loan_amounts)
-std_loan_amount = np.std(loan_amounts)
+# Calculate mean, median, and standard deviation for 'LoanAmount'
+mean_loan_amount = np.nanmean(loan_amount)
+median_loan_amount = np.nanmedian(loan_amount)
+std_loan_amount = np.nanstd(loan_amount)
 
 # Print the results
 print("Mean Loan Amount:", mean_loan_amount)
